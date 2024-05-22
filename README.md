@@ -53,14 +53,12 @@ ou=People,~ >
 
 ## Usage
 
-	docker run --rm -ti jgiannuzzi/shelldap --server ldap://server:389 --binddn cn=root
+	docker run --rm -ti cwage/shelldap --server ldap://server:389 --binddn cn=root
 
 If you would like to keep your history and server settings, just use a volume (with Docker >= 1.10):
 
-	docker run --rm -ti -v my-shelldap-settings:/root jgiannuzzi/shelldap --server ldap://server:389 --binddn cn=root
+	docker run --rm -ti -v my-shelldap-settings:/root cwage/shelldap --server ldap://server:389 --binddn cn=root
 
 You can even use a different volume for each LDAP server you connect to, if you want to keep your history and settings separate.
 
 Remember that you might need to use SSH tunnels to get access to your LDAP server...
-
-[![Build Status](https://travis-ci.org/jgiannuzzi/docker-shelldap.svg?branch=master)](https://travis-ci.org/jgiannuzzi/docker-shelldap)
